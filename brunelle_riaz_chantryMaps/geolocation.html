@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geolocation</title>
+</head>
+<body>
+	<h4>Getting location...</h4>
+    <span class="latitude">
+    </span>
+    <span class="longitude">
+    </span>
+    <script>
+		(function() {
+			var lat = document.querySelector('.latitude'),
+			lng = document.querySelector('.longitude'),
+			heading = document.querySelector('h4');	
+			
+			//use the browser's geolocation object to get our position
+			function getLocation(){
+			if (navigator.geolocation) {
+				navigator.geolocation.getCurrentPosition(showPosition);
+			} else {
+				console.log('no soup for you!');
+				}
+			}
+			
+			function showPosition(position){
+				heading.innerHTML = "Got location";
+				lat.innerHTML = "Latitude: " + position.coords.latitude;
+				lng.innerHTML = "Longitude: " + position.coords.longitude;	
+			}
+			
+			getLocation();
+			
+		})();
+	</script>
+</body>
+</html>

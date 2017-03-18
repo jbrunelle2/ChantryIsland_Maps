@@ -1,0 +1,33 @@
+.map-wrapper, .preload-wrapper { width:100%;  height: 500px; margin: 0 auto; }
+
+button { cursor: pointer; margin-left: 12px; }
+
+.address { width: 350px; }
+
+.preload-wrapper { 
+	position: absolute;
+	background-color: rgba(255, 255, 255, 0.85);
+	border: 2px solid #ccc;
+	z-index: 50;
+	width: 97.5%;
+	border-radius: 8px;
+	left: 0;
+	right: 0;
+	display: block;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 1em;
+	color: #CCC;
+
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	font-style: italic;
+
+	pointer-events: none;
+	transition: opacity 0.7s ease;
+}
+
+.hide-preloader { opacity: 0; }
+
+.preload-wrapper i { margin: 100px 0 20px; font-size: 2.2em; }
+
+.preload-wrapper span { display: block; }
